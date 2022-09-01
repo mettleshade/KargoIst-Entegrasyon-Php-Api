@@ -41,12 +41,12 @@ Veri güncelleme :
 
 ```
         $data = [
-            'barcode' => 'testmodamping', // SİPARİŞ BARKOD TAKİP NO
+            'barcode' => 'testbarkod', // SİPARİŞ BARKOD TAKİP NO
             'customer' => 'Mehmet Paçal', // ALICI ADI
             'province_name' => 'NİĞDE', // İL
             'county_name' => 'MERKEZ', // İLCE
             'address' => 'Mehmet 123123 Paçal', // ADRES
-            'telephone' => '5467374243', // TELEFON
+            'telephone' => '5555555555', // TELEFON
             'branch_code' => '21', // ŞUBE KODU
             'amount' => 100.00, // TUTAR // DECİMAL ÖRN 100.00
             'amount_type_id' => 3, // ÜCRET TÜRÜ // KAPIDA ÖDEME 1 => Toplu Gönderi, 2 => Ücret Alıcı 3 => Peşin Ödeme (KAPIDA ÖDEME VEYA ÖDENMİŞ İSE), 4 =>  Kredi Kartı (Müşteri), 5 => Kapıda Kredi Kartı
@@ -60,7 +60,7 @@ Kayıt detayına bakma :
 ```
         $data = [
             'id' => '0',
-            'barcode' => 'TESTMODAMPING'
+            'barcode' => 'testbarkod'
         ];
 
         $veri->KayitDetay($data);
@@ -68,13 +68,13 @@ Kayıt detayına bakma :
 
 Kayıt Silme :
 ```
-$veri->KayitSil('TESTMEHMETPACAL'); // BARKOD
+$veri->KayitSil('testbarkod'); // BARKOD
 ```
 
 Kargo durumunu öğrenme :
 ```
         $data = [
-            'barkod' => 'TESTMEHMETPACAL'
+            'barkod' => 'testbarkod'
         ];
         $veri->KargoDurum($data);
 ```
@@ -82,7 +82,7 @@ Kargo durumunu öğrenme :
 Kargo hareketlerini alma :
 ```
         $data = [
-            'barkod' => 'TESTMODAMPING'
+            'barkod' => 'testbarkod'
         ];
         $veri->KargoHareketleri($data);
 ```
